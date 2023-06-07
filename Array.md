@@ -38,7 +38,7 @@ int main(){
 		cout <<"Choose a function:";
 		cin >> arrayFunction;
 		
-		int numPosition;
+		int numPosition, succSearch = 0;
 		switch(arrayFunction){
 			case 1:
 				int insertedNumber;
@@ -97,7 +97,25 @@ int main(){
 				break;
 			
 			case 3:
-				
+				int searchElement;
+    
+    			cout << "Element to search:";
+    			cin >> searchElement;
+    			
+    			for(i = 0; i < arrSize; i++){
+        			if (arrNumbers[i] == searchElement){
+            			succSearch++;
+            			break;
+        			}
+    			}
+    			
+    			
+    			if(succSearch == 1)
+        			cout << "Element " << searchElement << "found at position " << i + 1;
+    			else{
+        		cout << "Element not found";
+    			}
+    			cout << "" << endl;
 				cout << "Choose another function?(Yes/No)";
 				cin >> repeatFunction;
 				
@@ -120,7 +138,7 @@ int main(){
 
     			// Output the updated array
     			cout << "Updated array: ";
-    			for (i = 0; i < arrSize; i++) {
+    			for(i = 0; i < arrSize; i++){
     	    		cout << arrNumbers[i] << " ";
    				}
     			cout << endl;
@@ -129,7 +147,17 @@ int main(){
 				cin >> repeatFunction;
 				
     			break;
-    	
+    		
+    		case 5:
+    			for(i = 0; i<arrSize; i++){
+    				cout << arrNumbers[i] << endl;
+				}
+				
+				cout << "Choose another function?(Yes/No)";
+				cin >> repeatFunction;
+				
+    			break;
+    			
     		default:
     			cout << "Invalid choice" << endl;
     			cout << "Choose another function?(Yes/No)";
@@ -137,6 +165,7 @@ int main(){
 				
 		}
 	}while((repeatFunction == "Yes") || (repeatFunction == "yes") || (repeatFunction == "YES"));
-		
+	
+	cout << "Thank you for using the program!" << endl;
 	return 0;
 }
