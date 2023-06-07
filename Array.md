@@ -1,4 +1,4 @@
-# demo
+# Array DSA
 
 #include <iostream>
 #include <string>
@@ -30,7 +30,6 @@ int main(){
 	cout << "3: Search for Array" << endl;
 	cout << "4: Update Array" << endl;
 	cout << "5: Show all Array" << endl;
-	cout << "6: Quit" << endl;
 	
 	int arrayFunction; 
 	string repeatFunction;
@@ -90,11 +89,20 @@ int main(){
     			for(i=0; i<arrSize; i++){
         			cout << arrNumbers[i] << " ";
     			}	
+				cout << "" << endl;
 				
 				cout << "Choose another function?(Yes/No)";
 				cin >> repeatFunction;
 				
 				break;
+			
+			case 3:
+				
+				cout << "Choose another function?(Yes/No)";
+				cin >> repeatFunction;
+				
+				break;
+			
 			case 4:
 				int updateElement, newElement;
     
