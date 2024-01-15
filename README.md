@@ -1,4 +1,3 @@
-# demo
+# School Projects
 
-fnaf trailer is out!
-hdsfhfead
+Random bunch of codes
